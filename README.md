@@ -12,7 +12,7 @@
     Перейдите в директорию с загруженным проектом:
     ```bash
     cd travel_website
-**Настройка контейнера Docker**
+3. **Настройка контейнера Docker**
     Настройте контейнер Docker с вашим приложением. 
     ```bash
    docker build -t travel_website .
