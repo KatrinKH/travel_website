@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Описание страны</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        .text {
+            flex: 1.3;
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        .text h1 {
+            font-size: 70px;
+        }
+
+        .text p {
+            font-size: 30px;
+        }
+
+        .text ol {
+            font-size: 30px;
+        }
+
+        .image {
+            flex: 0.7;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .back {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: blue;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<a href="{{ url_for('countries') }}" class="back">&larr;</a>
+<div class="container">
+    <div class="text">
+        <h1>Турция</h1>
+        <p>Факты, которые нужно знать перед поездкой:</p>
+        <ol>
+            <li>В среднем стоимость недельного отдыха вместе
+                с перелетом начинается от 180 тысяч рублей на двоих
+                и зависит от места отдыха и категории отеля.
+            </li>
+            <li>В стране действует переход на летнее/зимнее время. Летом разницы по времени с Москвой нет, зимой — минус
+                1 час.
+
+            </li>
+            <li>Климат в приморских районах средиземноморский, в горных — умеренный континентальный. Температура летом
+                на побережье в среднем около 30 °C.
+                Гражданам РФ не требуется оформлять визу для поездок в Турцию меньше 60 дней. При этом суммарно
+                находиться в стране разрешено не более 90 дней в течение полугода.
+            </li>
+            <li>
+                Великобритания – страна активного отдыха, где на отдыхе стоит заняться дайвингом и виндсерфингом,
+                научиться играть в гольф и освоить верховую езду.
+            </li>
+            <li>Лучшее время для поездки в Турцию — с мая по конец сентября, пик сезона приходится на летние месяцы.
+                С наступлением зимы туристический поток переориентируется на Стамбул, Памуккале, Карахаите и горнолыжные
+                курорты.
+            </li>
+        </ol>
+    </div>
+    <div class="image">
+        <img src="{{ url_for('static', filename='img/turkey.jpg') }}">
+    </div>
+</div>
+<div class="footer">
+    Хотите узнать больше? Вот <a href="{{ url_for('feedback') }}">форма обратной связи</a>
+</div>
+</body>
+</html>

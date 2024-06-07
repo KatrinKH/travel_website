@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Описание страны</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        .text {
+            flex: 1.3;
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        .text h1 {
+            font-size: 70px;
+        }
+
+        .text p {
+            font-size: 30px;
+        }
+
+        .text ol {
+            font-size: 30px;
+        }
+
+        .image {
+            flex: 0.7;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .back {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: blue;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<a href="{{ url_for('countries') }}" class="back">&larr;</a>
+<div class="container">
+    <div class="text">
+        <h1>Япония</h1>
+        <p>Факты, которые нужно знать перед поездкой:</p>
+        <ol>
+            <li>Японские электрички ходят точно по расписанию, а
+                пассажиры всегда вежливо выстраиваются в очередь на
+                вход в общественный транспорт
+            </li>
+            <li>Государственный язык – японский, но практически все жители свободно говорят на английском.</li>
+            <li>Туристический сезон в Японии круглогодично, но лучшим считается время с марта по май. Здесь не жарко и
+                не холодно, погода обычно не подбрасывает неприятных сюрпризов, а ещё цветут сады.
+            </li>
+            <li>Разнообразие природно-климатических зон делает возможным в Японии буквально всё. Множество термальных
+                источников сделало распространенными спа-процедуры. Горные склоны отлично подходят для горнолыжного
+                туризма, сноуборда и других зимних видов спорта. На пляжах южных островов отличный дайвинг.
+            </li>
+        </ol>
+    </div>
+    <div class="image">
+        <img src="{{ url_for('static', filename='img/japan.jpg') }}">
+    </div>
+</div>
+<div class="footer">
+    Хотите узнать больше? Вот <a href="{{ url_for('feedback') }}">форма обратной связи</a>
+</div>
+</body>
+</html>

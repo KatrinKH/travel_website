@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Описание страны</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        .text {
+            flex: 1.3;
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        .text h1 {
+            font-size: 70px;
+        }
+
+        .text p {
+            font-size: 30px;
+        }
+
+        .text ol {
+            font-size: 30px;
+        }
+
+        .image {
+            flex: 0.7;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .back {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: blue;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<a href="{{ url_for('countries') }}" class="back">&larr;</a>
+<div class="container">
+    <div class="text">
+        <h1>Китай</h1>
+        <p>Факты, которые нужно знать перед поездкой:</p>
+        <ol>
+            <li>В Китай из России можно добраться на самолете,
+                машине и поезде.
+            </li>
+            <li>География и ландшафт Китая очень разнообразны. Вы найдете в стране пустыни и джунгли, снег и море, горы
+                и равнины.
+            </li>
+            <li>Самое комфортное время для посещения любого региона страны — апрель-май и октябрь-ноябрь.
+            </li>
+            <li>
+                Три темы на букву «Т», о которых лучше не говорить с китайцами (если не разделяете их точку зрения):
+                Тяньаньмэнь, Тайвань и Тибет.
+            </li>
+            <li>Китай — одна из самых безопасных стран в мире, это говорит мировая статистика. Здесь не страшно ходить
+                по улицам даже в поздний час. Везде есть камеры, и все об этом знают, а если вам понадобится помощь,
+                смело обращайтесь к охранникам или патрульным полицейским.
+            </li>
+        </ol>
+    </div>
+    <div class="image">
+        <img src="{{ url_for('static', filename='img/china.jpg') }}">
+    </div>
+</div>
+<div class="footer">
+    Хотите узнать больше? Вот <a href="{{ url_for('feedback') }}">форма обратной связи</a>
+</div>
+</body>
+</html>

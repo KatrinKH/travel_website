@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Описание страны</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+        }
+        .text {
+            flex: 1.3;
+            padding: 20px;
+            font-size: 18px;
+        }
+        .text h1 {
+            font-size: 70px;
+        }
+        .text p {
+            font-size: 30px;
+        }
+        .text ol {
+            font-size: 30px;
+        }
+        .image {
+            flex: 0.7;
+            background-size: cover;
+            background-position: center;
+        }
+        .back {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+        }
+        .footer a {
+            text-decoration: none;
+            color: blue;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <a href="{{ url_for('countries') }}" class="back">&larr;</a>
+    <div class="container">
+        <div class="text">
+            <h1>Испания</h1>
+            <p>Факты, которые нужно знать перед поездкой:</p>
+            <ol>
+                <li>Курортный сезон на средиземноморском побережье Испании, включая Каталонию, начинается довольно поздно — в июне. Только на юге, в Андалусии, купаться начинают в мае. Зато длится сезон аж до октября.</li>
+                <li>В Испании — три типа курортов: морские, горнолыжные и бальнеологические.</li>
+                <li>В Испании — 48 памятников мирового значения и сотни просто интересных мест, которыми может гордиться любая страна. Поэтому на Пиренеях можно проводить отпуск хоть каждый год, и каждый раз выбирать новый экскурсионный маршрут.</li>
+                <li>Испания — один из мировых центров гастрономического туризма. По этой стране устраивают винные и кулинарные туры с посещением виноделен, сыроварен, мастер-классов у шеф-поваров и уроков по нарезке хамона.</li>
+            </ol>
+        </div>
+        <div class="image">
+            <img src="{{ url_for('static', filename='img/Spain.jpg') }}">
+        </div>
+    </div>
+    <div class="footer">
+        Хотите узнать больше? Вот <a href="{{ url_for('feedback') }}">форма обратной связи</a>
+    </div>
+</body>
+</html>
